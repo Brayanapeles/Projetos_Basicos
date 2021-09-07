@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Card animado</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-one">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Card Um</h3>
+                <p>
+                    Sint est consequat ea ex Lorem et in adipisicing nostrud. Consequat cillum aliqua fugiat reprehenderit. Non cillum esse proident deserunt aliquip excepteur cupidatat et minim. Proident ullamco Lorem est cillum cillum.
+                </p>
+                <a href="#">Saiba mais!</a>
+            </div>
+        </div>
+        <div class="card" id="card-two">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Card Dois</h3>
+                <p>
+                    Consequat excepteur ea dolore anim amet. Consequat aliquip magna et velit duis aute consequat labore nisi irure incididunt est exercitation velit. Anim reprehenderit sint irure ex et adipisicing aliqua exercitation labore veniam. Excepteur qui dolor commod
+                </p>
+                <a href="#">Saiba mais!</a>
+            </div>
+        </div>
+        <div class="card" id="card-tree">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Card Três</h3>
+                <p>
+                    Incididunt tempor ullamco nostrud ullamco qui ex. Sunt laborum Lorem sunt fugiat cupidatat. Aliqua veniam excepteur cupidatat deserunt incididunt qui consequat pariatur id sint aute. Eu nostrud sit mollit duis deserunt mollit voluptate qui
+                </p>
+                <a href="#">Saiba mais!</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="mini-card">
+
+        </div>
+    </footer>
+
+
+    <!-- Os scripts abaixo são responsáveis pela animação do card, eles são importados como se fosse uma biblioteca,
+    (vanila-tilt.js) -->
+    
+    <script src="./vanilla-tilt.js" type="text/javascript"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 500,
+            glare: true,
+            "max-glare": 1
+        });
+    </script>
+</body>
+
+</html>

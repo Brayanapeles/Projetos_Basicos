@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+    background: url(https://images4.alphacoders.com/114/thumb-1920-1145705.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .card {
+    position: relative;
+    width: 25vw;
+    height: 55vh;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 20px 50px;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+
+    cursor: pointer;
+}
+
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.container .card:hover .content{
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.container .card .content h2{
+    position: absolute;
+    top: -60px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.container .card .content h3{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .card .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;  
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#card-one:hover{
+    background: url(https://i0.wp.com/pipocamoderna.com.br/wp-content/uploads/2021/03/space_jam_a_new_legacy_bugs_bunny.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all ease .5s;
+
+    background-color: #0008;
+    background-blend-mode: darken;
+}
+
+#card-two:hover{
+    background: url(https://www.opopular.com.br/polopoly_fs/1.2284320.1626304572!/image/image.jpg_gen/derivatives/landscape_800/image.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all ease .5s;
+
+    background-color: #0008;
+    background-blend-mode: darken;
+}
+
+#card-tree:hover{
+    background: url(https://imgproxy.ojc.com.br/insecure/fit/800/1048/ce/0/plain/https%3A%2F%2Fwww.opopular.com.br%2Fpolopoly_fs%2F1.2284317.1626304584%21%2Fimage%2Fimage.jpg_gen%2Fderivatives%2Flandscape_800%2Fimage.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all ease .5s;
+
+    background-color: #0008;
+    background-blend-mode: darken;
+}
+
+footer{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+footer .mini-card{
+    width: 4vw;
+    height: 7vh;
+    border-radius: 0.5vw;
+    background-color: orange;
+
+    background: url(https://image.flaticon.com/icons/png/512/2527/2527964.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all ease 1s;
+
+    animation: spiderFlip 1s;
+    cursor: pointer;
+}
+
+footer .mini-card:hover{
+    transform: rotateY(360deg);
+}
+
+@keyframes spiderFlip{
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
